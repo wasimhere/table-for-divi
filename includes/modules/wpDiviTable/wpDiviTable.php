@@ -40,6 +40,20 @@ class WP_Divi_Table extends ET_Builder_Module {
 	}
 
 
+	//advanced fields
+	function get_advanced_fields_config() {
+
+		$advanced_fields = array(
+
+			'background'	=> false
+
+		);
+
+		return $advanced_fields;
+
+	}
+
+
 	//render html
 	public function render( $unprocessed_props, $content, $render_slug ) {
 		
