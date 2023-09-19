@@ -17,7 +17,7 @@ class WP_Divi_Table extends Component {
 
         <h2 className="module-title">Divi Table</h2>
 
-        <div className="module-content">Sorry, In this version of the plugin table preview is not available. Please check the actual output on the frontend.</div>
+        <div className="module-content">Sorry, In this version of the plugin table preview is not available.<br />Please check the actual output on the frontend.</div>
 
       </div>
       

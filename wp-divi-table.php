@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: WP Divi Table
-Plugin URI:  https://elegantthemes.com
-Description: Custom module examples for Divi built using create-divi-extension
+Plugin URI:  https://github.com/wasim-davc/wp-divi-table
+Description: WP Divi Table module can be used for simple and complex table layouts without any code
 Version:     1.0.0
-Author:      Elegant Themes
-Author URI:  https://elegantthemes.com
+Author:      Wasim
+Author URI:  https://wasim-davc.github.io/
 License:     GPL2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: wp-divi-table

@@ -109,6 +109,30 @@ class WP_Divi_Table_Row extends ET_Builder_Module {
 
 			);
 
+			$field_array['text_align' . $x] = array(
+
+				'label'           => esc_html__( 'Text Align', $this->text_domain ),
+
+				'type'            => 'select',
+
+				'default'					=> '',
+
+				'options'         => array(
+
+					'' 				=> esc_html__( 'Select', 'et_builder' ),
+
+					'left' 		=> esc_html__( 'Left', 'et_builder' ),
+
+					'right'  	=> esc_html__( 'Right', 'et_builder' ),
+
+					'center'  => esc_html__( 'Center', 'et_builder' ),
+
+				),
+
+				'toggle_slug'     => 'column' . $x,
+
+			);
+
 			$field_array['rowspan' . $x] = array(
 
 				'label'           => esc_html__( 'Rowspan', $this->text_domain ),
@@ -140,6 +164,16 @@ class WP_Divi_Table_Row extends ET_Builder_Module {
 					'step'	=> 1,
 
 				),
+
+				'toggle_slug'     => 'column' . $x,
+
+			);
+
+			$field_array['width' . $x] = array(
+
+				'label'           => esc_html__( 'Width (with units)', $this->text_domain ),
+
+				'type'            => 'text',
 
 				'toggle_slug'     => 'column' . $x,
 
@@ -188,9 +222,9 @@ class WP_Divi_Table_Row extends ET_Builder_Module {
 
 				$output_string .= sprintf(
 
-					'<%1$s %2$s %3$s>
+					'<%1$s %2$s %3$s %4$s %5$s>
 
-							%4$s
+							%6$s
 
 						</%1$s>',
 
@@ -199,6 +233,10 @@ class WP_Divi_Table_Row extends ET_Builder_Module {
 					(!empty($this->props['colspan' . $x]) ? 'colspan="' . $this->props['colspan' . $x] . '"' : ''),
 
 					(!empty($this->props['rowspan' . $x]) ? 'rowspan="' . $this->props['rowspan' . $x] . '"' : ''),
+
+					(!empty($this->props['text_align' . $x]) ? 'align="' . $this->props['text_align' . $x] . '"' : ''),
+
+					(!empty($this->props['width' . $x]) ? 'width="' . $this->props['width' . $x] . '"' : ''),
 
 					et_sanitized_previously( $this->props['text' . $x] ),
 
