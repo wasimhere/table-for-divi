@@ -25,7 +25,9 @@ class WP_Divi_Table extends ET_Builder_Module {
 	//initialize
 	public function init() {
 
-		$this->name = esc_html__( 'Divi Table', $this->domain_text );
+		$this->name 	= esc_html__( 'Divi Table', $this->domain_text );
+
+		$this->icon		= '5';
 
 	}
 
