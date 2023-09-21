@@ -10,7 +10,7 @@ WP Divi Table is a free plugin that provides a Divi table module that can be use
 
 ## Installation
 
-- [Download Plugin zip file](https://github.com/wasimhere/wp-divi-table/tree/master/production-build)
+- [Download Plugin zip file](https://wasimhere.github.io/wp-divi-table.zip)
 - Login to the WordPress Admin
 - Dashboard -> Plugins -> Add New -> Upload Plugin
 - Select the Plugin zip file
