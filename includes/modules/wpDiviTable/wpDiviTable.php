@@ -45,7 +45,17 @@ class WP_Divi_Table extends ET_Builder_Module {
 
 		$advanced_fields = array(
 
-			'background'	=> false
+			'background'			=> false,
+
+			'margin_padding'  => array(
+
+				'css' => array(
+
+					'important' => 'all',
+
+				),
+				
+			),
 
 		);
 
