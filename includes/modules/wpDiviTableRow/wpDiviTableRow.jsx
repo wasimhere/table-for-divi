@@ -1,6 +1,8 @@
 // External Dependencies
 import React, { Component } from 'react';
 
+// Internal Dependencies
+import './style.css';
 
 class WP_Divi_Table_Row extends Component {
 
@@ -13,8 +15,30 @@ class WP_Divi_Table_Row extends Component {
   render() {
 
     return (
+      
+      <div className="table-row">
+        
+        {
 
-      ''
+          [...Array(20)].map((element, index) => {
+
+            let textKey = 'text' + (index + 1);
+
+            if(typeof this.props[textKey] !== "undefined"){
+
+              return (
+
+                <div className="table-col" key={textKey}>{this.props[textKey]}</div>
+
+              )
+
+            }
+
+          })
+
+        }
+
+      </div>
 
     );
 

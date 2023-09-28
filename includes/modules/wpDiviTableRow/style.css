@@ -1,0 +1,9 @@
+.table-row{
+  display: flex;
+  text-align: left;
+}
+.table-row .table-col{
+  flex-grow: 1;
+  border: 1px solid #ccc;
+  padding: 8px;
+}

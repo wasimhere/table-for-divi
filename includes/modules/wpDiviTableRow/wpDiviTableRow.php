@@ -54,11 +54,11 @@ class WP_Divi_Table_Row extends ET_Builder_Module {
 		$this->settings_modal_toggles  = array(
 
 			// Content tab's slug is "general"
-			'general'  => array(
+			'general'		=> array(
 
 				'toggles' => $column_toggle_array,
 
-			),
+			)
 
 		);
 
@@ -182,6 +182,19 @@ class WP_Divi_Table_Row extends ET_Builder_Module {
 		endfor;
 
 
+		$field_array['classes'] = array(
+
+			'label'				=> esc_html__( 'CSS Class', $this->text_domain ),
+
+			'type'				=> 'text',
+
+			'tab_slug' 		=> 'custom_css',
+
+			'toggle_slug'	=> 'classes',
+
+		);
+
+
 		//return fields
 		return $field_array;
 
@@ -214,7 +227,9 @@ class WP_Divi_Table_Row extends ET_Builder_Module {
 	 */
 	function render( $attrs, $content = null, $render_slug ) {
 
-		$output_string = '<tr>';
+		$classes = (!empty($this->props['classes']) ? 'class="' . $this->props['classes'] . '"' : '');
+
+		$output_string = '<tr ' . $classes . '>';
 
 		for($x = 1; $x <= $this->total_columns; $x++):
 

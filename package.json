@@ -29,5 +29,8 @@
 	"cde": {
 		"gettext": "wp-divi-table",
 		"prefix": "wp"
+	},
+	"devDependencies": {
+		"@babel/plugin-transform-object-rest-spread": "^7.22.15"
 	}
 }
