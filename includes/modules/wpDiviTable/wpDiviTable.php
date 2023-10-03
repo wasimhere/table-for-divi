@@ -45,9 +45,9 @@ class WP_Divi_Table extends ET_Builder_Module {
 
 		$advanced_fields = array(
 
-			'background'			=> false,
+			'background'				=> false,
 
-			'margin_padding'  => array(
+			'margin_padding'  	=> array(
 
 				'css' => array(
 
@@ -56,6 +56,24 @@ class WP_Divi_Table extends ET_Builder_Module {
 				),
 				
 			),
+
+			'link_options'			=> false,
+
+			'borders'						=> false,
+
+			'box_shadow'				=> false,
+
+			'button'						=> false,
+
+			'filters'						=> false,
+
+			'fonts'							=> false,
+
+			'animation'					=> false,
+
+			'text'							=> false,
+
+			'transform'					=> false,
 
 		);
 

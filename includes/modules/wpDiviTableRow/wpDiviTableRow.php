@@ -201,11 +201,32 @@ class WP_Divi_Table_Row extends ET_Builder_Module {
 	}
 
 
+	//advanced fields
 	function get_advanced_fields_config() {
 
 		$advanced_fields = array(
 
-			'background'	=> false
+			'background'				=> false,
+
+			'margin_padding'  	=> false,
+
+			'max_width'					=> false,
+
+			'link_options'			=> false,
+
+			'borders'						=> false,
+
+			'box_shadow'				=> false,
+
+			'button'						=> false,
+
+			'filters'						=> false,
+
+			'fonts'							=> false,
+
+			'animation'					=> false,
+
+			'transform'					=> false,
 
 		);
 
