@@ -1,5 +1,5 @@
 {
-	"name": "wp-divi-table",
+	"name": "table-for-divi",
 	"version": "1.0",
 	"private": true,
 	"dependencies": {
@@ -27,7 +27,7 @@
 		]
 	},
 	"cde": {
-		"gettext": "wp-divi-table",
+		"gettext": "table-for-divi",
 		"prefix": "wp"
 	},
 	"devDependencies": {

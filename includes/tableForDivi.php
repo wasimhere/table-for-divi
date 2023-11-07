@@ -1,5 +1,5 @@
 <?php
-class WP_DiviTable extends DiviExtension {
+class TableForDivi extends DiviExtension {
 
 	/**
 	 * The gettext domain for the extension's translations.
@@ -8,7 +8,7 @@ class WP_DiviTable extends DiviExtension {
 	 *
 	 * @var string
 	 */
-	public $gettext_domain = 'wp-divi-table';
+	public $gettext_domain = 'table-for-divi';
 
 	/**
 	 * The extension's WP Plugin name.
@@ -17,7 +17,7 @@ class WP_DiviTable extends DiviExtension {
 	 *
 	 * @var string
 	 */
-	public $name = 'wp-divi-table';
+	public $name = 'table-for-divi';
 
 	/**
 	 * The extension's version
@@ -34,7 +34,7 @@ class WP_DiviTable extends DiviExtension {
 	 * @param string $name
 	 * @param array  $args
 	 */
-	public function __construct( $name = 'wp-divi-table', $args = array() ) {
+	public function __construct( $name = 'table-for-divi', $args = array() ) {
 
 		$this->plugin_dir              = plugin_dir_path( __FILE__ );
 
@@ -44,4 +44,4 @@ class WP_DiviTable extends DiviExtension {
 	}
 }
 
-new WP_DiviTable;
+new TableForDivi;
