@@ -1,23 +1,29 @@
 <?php
+
+//Exit if accessed directly
+if(!defined('ABSPATH')){
+
+	exit();
+
+}
+
 /**
  * 
  * --------------------
- * WP Divi Table Row
+ * tableForDiviModuleRow
  * --------------------
  * 
  * */
 
-class WP_Divi_Table_Row extends ET_Builder_Module {
+class TFDT_Module_Row extends ET_Builder_Module {
 
 
 	//data members
-	public $slug      	= 'wp_divi_table_row';
+	public $slug      	= 'tfdt_module_row';
 
 	public $type 				= 'child';
 
 	public $vb_support 	= 'on';
-
-	public $text_domain = 'wp-divi-table';
 
 	public $total_columns = 20;
 
@@ -31,14 +37,14 @@ class WP_Divi_Table_Row extends ET_Builder_Module {
 	function init() {
 
 		// Module name
-		$this->name = esc_html__( 'Table Row', $this->text_domain );
+		$this->name = esc_html__( 'Table Row', 'table-for-divi' );
 
 		// Default label for module item. Basically if $this->child_title_var and $this->child_title_fallback_var
 		// attributes are empty, this default text will be used instead as item label
-		$this->advanced_setting_title_text = esc_html__( 'Table Row', 'et_builder' );
+		$this->advanced_setting_title_text = esc_html__( 'Table Row', 'table-for-divi' );
 
 		// Module item's modal title
-		$this->settings_text = esc_html__( 'Table Row Settings', 'et_builder' );
+		$this->settings_text = esc_html__( 'Table Row Settings', 'table-for-divi' );
 
 
 		$column_toggle_array = array();
@@ -46,7 +52,13 @@ class WP_Divi_Table_Row extends ET_Builder_Module {
 
 		for($x = 1; $x <= $this->total_columns; $x++):
 
-			$column_toggle_array['column' . $x] = esc_html__( 'Column ' . $x, $this->text_domain );
+			$column_toggle_array['column' . $x] = sprintf(
+
+				esc_html__( 'Column %1$s', 'table-for-divi' ), 
+
+				esc_html($x)
+
+			);
 
 		endfor;
 
@@ -81,7 +93,7 @@ class WP_Divi_Table_Row extends ET_Builder_Module {
 
 			$field_array['text' . $x] = array(
 
-				'label'           => esc_html__( 'Text', $this->text_domain ),
+				'label'           => esc_html__( 'Text', 'table-for-divi' ),
 
 				'type'            => 'textarea',
 
@@ -91,7 +103,7 @@ class WP_Divi_Table_Row extends ET_Builder_Module {
 
 			$field_array['tag' . $x] = array(
 
-				'label'           => esc_html__( 'Tag', $this->text_domain ),
+				'label'           => esc_html__( 'Tag', 'table-for-divi' ),
 
 				'type'            => 'select',
 
@@ -99,9 +111,9 @@ class WP_Divi_Table_Row extends ET_Builder_Module {
 
 				'options'         => array(
 
-					'td' => esc_html__( 'td', 'et_builder' ),
+					'td' => esc_html__( 'td', 'table-for-divi' ),
 
-					'th'  => esc_html__( 'th', 'et_builder' ),
+					'th'  => esc_html__( 'th', 'table-for-divi' ),
 
 				),
 
@@ -111,7 +123,7 @@ class WP_Divi_Table_Row extends ET_Builder_Module {
 
 			$field_array['text_align' . $x] = array(
 
-				'label'           => esc_html__( 'Text Align', $this->text_domain ),
+				'label'           => esc_html__( 'Text Align', 'table-for-divi' ),
 
 				'type'            => 'select',
 
@@ -119,13 +131,13 @@ class WP_Divi_Table_Row extends ET_Builder_Module {
 
 				'options'         => array(
 
-					'' 				=> esc_html__( 'Select', 'et_builder' ),
+					'' 				=> esc_html__( 'Select', 'table-for-divi' ),
 
-					'left' 		=> esc_html__( 'Left', 'et_builder' ),
+					'left' 		=> esc_html__( 'Left', 'table-for-divi' ),
 
-					'right'  	=> esc_html__( 'Right', 'et_builder' ),
+					'right'  	=> esc_html__( 'Right', 'table-for-divi' ),
 
-					'center'  => esc_html__( 'Center', 'et_builder' ),
+					'center'  => esc_html__( 'Center', 'table-for-divi' ),
 
 				),
 
@@ -135,7 +147,7 @@ class WP_Divi_Table_Row extends ET_Builder_Module {
 
 			$field_array['rowspan' . $x] = array(
 
-				'label'           => esc_html__( 'Rowspan', $this->text_domain ),
+				'label'           => esc_html__( 'Rowspan', 'table-for-divi' ),
 
 				'type'            => 'range',
 
@@ -153,7 +165,7 @@ class WP_Divi_Table_Row extends ET_Builder_Module {
 
 			$field_array['colspan' . $x] = array(
 
-				'label'           => esc_html__( 'Colspan', $this->text_domain ),
+				'label'           => esc_html__( 'Colspan', 'table-for-divi' ),
 
 				'type'            => 'range',
 
@@ -171,7 +183,7 @@ class WP_Divi_Table_Row extends ET_Builder_Module {
 
 			$field_array['width' . $x] = array(
 
-				'label'           => esc_html__( 'Width (with units)', $this->text_domain ),
+				'label'           => esc_html__( 'Width (with units)', 'table-for-divi' ),
 
 				'type'            => 'text',
 
@@ -184,7 +196,7 @@ class WP_Divi_Table_Row extends ET_Builder_Module {
 
 		$field_array['classes'] = array(
 
-			'label'				=> esc_html__( 'CSS Class', $this->text_domain ),
+			'label'				=> esc_html__( 'CSS Class', 'table-for-divi' ),
 
 			'type'				=> 'text',
 
@@ -292,4 +304,4 @@ class WP_Divi_Table_Row extends ET_Builder_Module {
 
 }
 
-new WP_Divi_Table_Row;
+new TFDT_Module_Row;

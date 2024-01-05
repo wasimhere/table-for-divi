@@ -1,5 +1,12 @@
 <?php
 
+//Exit if accessed directly
+if(!defined('ABSPATH')){
+
+	exit();
+
+}
+
 if ( ! class_exists( 'ET_Builder_Element' ) ) {
 
 	return;

@@ -4,13 +4,13 @@ import React, { Component } from 'react';
 // Internal Dependencies
 import './style.css';
 
-class WP_Divi_Table_Row extends Component {
+class TFDT_Module_Row extends Component {
 
-  static slug = 'wp_divi_table_row';
+  static slug = 'tfdt_module_row';
 
   /**
    * Module render in VB
-   * Basically WP_Divi_Table_Row->render() equivalent in JSX
+   * Basically TFDT_Module_Row->render() equivalent in JSX
    */
   render() {
 
@@ -46,4 +46,4 @@ class WP_Divi_Table_Row extends Component {
   
 }
 
-export default WP_Divi_Table_Row;
+export default TFDT_Module_Row;

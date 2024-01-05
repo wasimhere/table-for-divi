@@ -1,31 +1,36 @@
 <?php
 
+//Exit if accessed directly
+if(!defined('ABSPATH')){
+
+	exit();
+
+}
+
 /**
  * 
  * --------------------
- * WP Divi Table Module
+ * tableForDiviModule
  * --------------------
  * 
  * */
 
 
-class WP_Divi_Table extends ET_Builder_Module {
+class TFDT_Module extends ET_Builder_Module {
 
 
 	//data members
-	public $slug       = 'wp_divi_table';
+	public $slug       = 'tfdt_module';
 
 	public $vb_support = 'on';
 
-	public $child_slug = 'wp_divi_table_row';
-
-	public $text_domain = 'wp-divi-table';
-
+	public $child_slug = 'tfdt_module_row';
+	
 
 	//initialize
 	public function init() {
 
-		$this->name 	= esc_html__( 'Divi Table', $this->domain_text );
+		$this->name 	= esc_html__( 'Divi Table', 'table-for-divi' );
 
 		$this->icon		= '5';
 
@@ -88,7 +93,7 @@ class WP_Divi_Table extends ET_Builder_Module {
 		// Render module content
 		return sprintf(
 
-			'<div class="wp-divi-table">
+			'<div class="table-for-divi">
 
 				<table>
 
@@ -106,4 +111,4 @@ class WP_Divi_Table extends ET_Builder_Module {
 
 }
 
-new WP_Divi_Table;
+new TFDT_Module;

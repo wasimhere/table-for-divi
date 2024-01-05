@@ -1,13 +1,13 @@
 // Internal Dependencies
-import wpDiviTable from './wpDiviTable/wpDiviTable';
+import TFDT_Module from './TFDT_Module/TFDT_Module';
 
-import wpDiviTableRow from './wpDiviTableRow/wpDiviTableRow';
+import TFDT_Module_Row from './TFDT_Module_Row/TFDT_Module_Row';
 
 
 export default [
 
-  wpDiviTable,
+  TFDT_Module,
 
-  wpDiviTableRow
+  TFDT_Module_Row
   
 ];

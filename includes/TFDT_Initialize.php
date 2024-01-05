@@ -1,5 +1,13 @@
 <?php
-class TableForDivi extends DiviExtension {
+
+//Exit if accessed directly
+if(!defined('ABSPATH')){
+
+	exit();
+
+}
+
+class TFDT_Initialize extends DiviExtension {
 
 	/**
 	 * The gettext domain for the extension's translations.
@@ -29,7 +37,7 @@ class TableForDivi extends DiviExtension {
 	public $version = '1.0.0';
 
 	/**
-	 * WP_Divi_Table constructor.
+	 * TableForDivi constructor.
 	 *
 	 * @param string $name
 	 * @param array  $args
@@ -41,7 +49,9 @@ class TableForDivi extends DiviExtension {
 		$this->plugin_dir_url          = plugin_dir_url( $this->plugin_dir );
 
 		parent::__construct( $name, $args );
+
 	}
+	
 }
 
-new TableForDivi;
+new TFDT_Initialize;

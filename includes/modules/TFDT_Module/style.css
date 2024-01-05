@@ -1,4 +1,4 @@
-.wp-divi-table-builder {
+.table-for-divi-builder {
   background: #6a2eb6;
   color: #fff;
   border-radius: 5px;
@@ -6,14 +6,14 @@
   padding: 30px 20px;
   box-shadow: 0 0 35px 10px #6a2eb647;
 }
-.wp-divi-table-builder .module-desc{
+.table-for-divi-builder .module-desc{
   margin: 0 0 20px;
 }
-.wp-divi-table-builder .module-table{
+.table-for-divi-builder .module-table{
   background: #fff;
   color: #000;
   padding: 15px;
 }
-.wp_divi_table_row{
+.tfdt_module_row{
   margin: 0 0 -1px!important;
 }

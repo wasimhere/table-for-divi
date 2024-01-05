@@ -5,15 +5,15 @@ import React, { Component } from 'react';
 import './style.css';
 
 
-class WP_Divi_Table extends Component {
+class TFDT_Module extends Component {
 
-  static slug = 'wp_divi_table';
+  static slug = 'tfdt_module';
 
   render() {
 
     return (
 
-      <div className="wp-divi-table-builder">
+      <div className="table-for-divi-builder">
 
         <div className="module-desc">Output in the visual builder might be different from the actual output.<br />Please check the actual output on the frontend.</div>
 
@@ -27,4 +27,4 @@ class WP_Divi_Table extends Component {
 
 }
 
-export default WP_Divi_Table;
+export default TFDT_Module;

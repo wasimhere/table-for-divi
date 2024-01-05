@@ -14,7 +14,7 @@ Domain Path: /languages
 */
 
 
-if ( ! function_exists( 'wp_initialize_table_for_divi' ) ):
+if ( ! function_exists( 'tfdt_wp_initialize' ) ):
 	
 	/**
 	 * Creates the extension's main class instance.
@@ -22,12 +22,13 @@ if ( ! function_exists( 'wp_initialize_table_for_divi' ) ):
 	 * @since 1.0.0
 	 */
 
-	function wp_initialize_table_for_divi() {
+	//table for divi theme initialize
+	function tfdt_wp_initialize() {
 
-		require_once plugin_dir_path( __FILE__ ) . 'includes/tableForDivi.php';
+		require_once plugin_dir_path( __FILE__ ) . 'includes/TFDT_Initialize.php';
 
 	}
 
-	add_action( 'divi_extensions_init', 'wp_initialize_table_for_divi' );
+	add_action( 'divi_extensions_init', 'tfdt_wp_initialize' );
 
 endif;
