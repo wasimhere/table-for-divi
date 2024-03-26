@@ -24,11 +24,13 @@ class TFDT_Module_Row extends Component {
 
             let textKey = 'text' + (index + 1);
 
-            if(typeof this.props[textKey] !== "undefined"){
+            let col_value = this.props[textKey];
+
+            if(typeof col_value !== "undefined"){
 
               return (
 
-                <div className="table-col" key={textKey}>{this.props[textKey]}</div>
+                <div className="table-col" key={textKey}>{col_value}</div>
 
               )
 

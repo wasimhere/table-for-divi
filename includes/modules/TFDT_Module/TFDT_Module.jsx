@@ -17,7 +17,7 @@ class TFDT_Module extends Component {
 
         <div className="module-desc">Output in the visual builder might be different from the actual output.<br />Please check the actual output on the frontend.</div>
 
-        <div className="module-table">{this.props.content}</div>        
+        <div className="module-table">{this.props.content}</div>     
 
       </div>
       

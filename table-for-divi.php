@@ -3,7 +3,7 @@
 Plugin Name: Table for Divi
 Plugin URI:  https://github.com/wasimhere/table-for-divi
 Description: Table for Divi module can be used for simple and complex table layouts without any code
-Version:     1.0.0
+Version:     1.2.0
 Author:      Wasim
 Author URI:  https://wasimhere.github.io/
 License:     GPL2

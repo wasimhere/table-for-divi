@@ -43,6 +43,8 @@ class TFDT_Module_Row extends ET_Builder_Module {
 		// attributes are empty, this default text will be used instead as item label
 		$this->advanced_setting_title_text = esc_html__( 'Table Row', 'table-for-divi' );
 
+		$this->child_title_var  = 'text1';
+
 		// Module item's modal title
 		$this->settings_text = esc_html__( 'Table Row Settings', 'table-for-divi' );
 
@@ -191,6 +193,16 @@ class TFDT_Module_Row extends ET_Builder_Module {
 
 			);
 
+			$field_array['css_class' . $x] = array(
+
+				'label'           => esc_html__( 'CSS Class', 'table-for-divi' ),
+
+				'type'            => 'text',
+
+				'toggle_slug'     => 'column' . $x,
+
+			);
+
 		endfor;
 
 
@@ -270,9 +282,9 @@ class TFDT_Module_Row extends ET_Builder_Module {
 
 				$output_string .= sprintf(
 
-					'<%1$s %2$s %3$s %4$s %5$s>
+					'<%1$s %2$s %3$s %4$s %5$s %6$s>
 
-							%6$s
+							%7$s
 
 						</%1$s>',
 
@@ -285,6 +297,8 @@ class TFDT_Module_Row extends ET_Builder_Module {
 					(!empty($this->props['text_align' . $x]) ? 'align="' . $this->props['text_align' . $x] . '"' : ''),
 
 					(!empty($this->props['width' . $x]) ? 'width="' . $this->props['width' . $x] . '"' : ''),
+
+					(!empty($this->props['css_class' . $x]) ? 'class="' . $this->props['css_class' . $x] . '"' : ''),
 
 					et_sanitized_previously( $this->props['text' . $x] ),
 
