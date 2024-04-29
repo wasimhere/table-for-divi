@@ -17,3 +17,14 @@
 .tfdt_module_row{
   margin: 0 0 -1px!important;
 }
+
+.tfdt_module .table-for-divi {
+  overflow: auto;
+}
+
+
+@media (max-width: 767px) {
+.tfdt_module .table-for-divi {
+  box-shadow: 0 0 5px rgba(0,0,0,.2);
+}
+}
