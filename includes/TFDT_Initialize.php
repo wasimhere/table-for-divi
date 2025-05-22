@@ -50,7 +50,93 @@ class TFDT_Initialize extends DiviExtension {
 
 		parent::__construct( $name, $args );
 
+
+		//add admin notice to show review notification
+    add_action( 'admin_notices', [$this, 'tfdt_add_review_notification'] );
+
+    //ajax action to dismiss review notification
+    add_action( 'wp_ajax_tfdt_dismiss_review_notification', [$this, 'tfdt_dismiss_review_notification'] );
+
 	}
+
+
+	/**
+   * 
+   * add admin notice to show review notification
+   * 
+   * Add the review notification in WordPress Admin
+   * 
+   * */
+  public function tfdt_add_review_notification() {
+
+    // Check if the plugin is activated and the user is an admin
+    if ( current_user_can( 'administrator' ) && is_plugin_active( 'table-for-divi/table-for-divi.php' ) ) {
+
+      // Check if the user has already dismissed or reviewed the plugin
+      $notification_status = get_option( 'tfdt_review_notification_status', '' );
+
+      // Only show the notification if the user hasn't dismissed it or left a review
+      if ( empty( $notification_status ) ) {
+          
+        ?>
+
+          <div class="notice notice-info is-dismissible" id="tfdt-review-notification">
+            
+            <p><strong>Enjoying Table for Divi?</strong> We would love to hear your feedback! Please leave us a review on the WordPress plugin page.</p>
+            
+            <p>
+
+              <a href="https://wordpress.org/plugins/table-for-divi/#reviews" target="_blank" class="button button-primary">Leave a Review</a>
+
+              <button class="button button-secondary" id="tfdt-dismiss-review-notification" style="margin-left: 10px;">No Thanks</button>
+
+            </p>
+
+          </div>
+
+          <script>
+              document.getElementById('tfdt-dismiss-review-notification').addEventListener('click', function() {
+                  var ajax_url = "<?php echo esc_url(admin_url('admin-ajax.php')); ?>";
+                  var data = {
+                      action: 'tfdt_dismiss_review_notification'
+                  };
+
+                  fetch(ajax_url, {
+                      method: 'POST',
+                      body: new URLSearchParams(data),
+                  })
+                  .then(response => response.text())
+                  .then(response => {
+                      document.getElementById('tfdt-review-notification').style.display = 'none';
+                  });
+              });
+          </script>
+
+        <?php
+
+      }
+
+    }
+
+	}
+
+
+
+	/**
+   * 
+   * ajax action to dismiss review notification
+   * 
+   * Function to handle the dismiss action
+   * 
+   * */
+  public function tfdt_dismiss_review_notification() {
+      
+    update_option( 'tfdt_review_notification_status', 'dismissed' );
+
+    wp_die(); // Terminate the request
+
+  }
+
 	
 }
 
