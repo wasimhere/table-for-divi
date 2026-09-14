@@ -1,0 +1,1 @@
+export * as tableModule from './table-module';

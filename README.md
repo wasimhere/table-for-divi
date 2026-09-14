@@ -1,5 +1,7 @@
 ## Table for Divi
 
+**Fully Compatible to Divi 5**
+
 Table for Divi is a free plugin that provides a Divi table module that can be used to make simple and complex table layouts.
 
 ## Requirements

@@ -1,0 +1,141 @@
+body .entry-content{
+
+  .table-for-divi {
+    overflow: auto;
+  }
+
+  table.tfdt_table_module {
+    // --- BASE STYLES (Applied only when a theme is selected, NOT on No Style) ---
+    &.tfdt-theme-default,
+    &.tfdt-theme-bordered,
+    &.tfdt-theme-striped,
+    &.tfdt-theme-dark {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      font-family: inherit;
+    }
+
+    // --- DEFAULT THEME ---
+    &.tfdt-theme-default {
+      color: #212529;
+      background-color: transparent;
+      border: 0;
+
+      th {
+        font-weight: 600;
+        text-align: left;
+        vertical-align: bottom;
+        padding: 0.85rem 1rem;
+        border-bottom: 2px solid #dee2e6;
+      }
+
+      td {
+        padding: 0.75rem 1rem;
+        vertical-align: middle;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 1px solid #dee2e6;
+      }
+
+      tbody tr:hover {
+        background-color: rgba(0, 0, 0, 0.03);
+      }
+    }
+
+    // --- BORDERED THEME ---
+    &.tfdt-theme-bordered {
+      color: #212529;
+      background-color: transparent;
+
+      th,
+      td {
+        padding: 0.75rem 1rem;
+        vertical-align: middle;
+        border: 1px solid #dee2e6 !important;
+      }
+
+      th {
+        font-weight: 600;
+      }
+    }
+
+    // --- STRIPED THEME ---
+    &.tfdt-theme-striped {
+      color: #212529;
+      background-color: transparent;
+
+      th {
+        font-weight: 600;
+        text-align: left;
+        padding: 0.85rem 1rem;
+        border-bottom: 2px solid #dee2e6;
+      }
+
+      td {
+        padding: 0.75rem 1rem;
+        vertical-align: middle;
+        border-bottom: 1px solid #dee2e6;
+      }
+
+      tbody {
+        tr:nth-child(odd) {
+          background-color: rgb(231, 231, 231);
+        }
+        tr:hover {
+          background-color: rgba(0, 0, 0, 0.03);
+        }
+      }
+    }
+
+    // --- DARK THEME ---
+    &.tfdt-theme-dark {
+      background-color: #212529;
+      color: #f8f9fa;
+      border: 0;
+
+      th {
+        font-weight: 600;
+        color: #f8f9fa;
+        background-color: #212529;
+        padding: 0.85rem 1rem;
+        border-bottom: 2px solid #495057;
+      }
+
+      td {
+        padding: 0.75rem 1rem;
+        vertical-align: middle;
+        color: #f8f9fa;
+        background-color: #212529;
+        border-bottom: 1px solid #373b3e;
+      }
+
+      tbody tr:hover {
+        background-color: rgba(255, 255, 255, 0.075);
+      }
+    }
+  }
+
+}
+
+.tfdt-table-card-wrapper {
+  background: #1b5cff;
+  border-radius: 10px;
+  padding: 20px;
+
+  .tfdt-builder-notice {
+    margin-bottom: 12px;
+    padding: 10px 12px;
+    background: #fff;
+    color: #222c39;
+    border-radius: 6px;
+    font-size: 13px;
+    line-height: 1.5;
+    text-align: center;
+  }
+}
+
+body .entry-content .tfdt-table-card-wrapper table.tfdt_table_module {
+  background-color: #fff;
+}

@@ -1,0 +1,49 @@
+{
+  "name": "tfdt/table-row",
+  "d4Shortcode": "",
+  "title": "Table Row",
+  "titles": "Table Rows",
+  "moduleIcon": "tfdt/table-row-module",
+  "moduleClassName": "tfdt_table_row_module",
+  "moduleOrderClassName": "tfdt_table_row_module",
+  "category": "child-module",
+  "childModuleName": "tfdt/table-cell",
+  "childModuleTitle": "Table Cell",
+  "childrenName": [
+    "tfdt/table-cell"
+  ],
+  "allowAllElements": false,
+  "attributes": {
+    "module": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "default": {
+        "meta": {
+          "adminLabel": {
+            "desktop": {
+              "value": "Table Row"
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "border": {
+          "important": true
+        }
+      },
+      "settings": {
+        "meta": {
+          "adminLabel": {}
+        },
+        "advanced": {
+          "htmlAttributes": {}
+        },
+        "decoration": {}
+      }
+    }
+  },
+  "customCssFields": {},
+  "settings": {
+    "content": "auto"
+  }
+}

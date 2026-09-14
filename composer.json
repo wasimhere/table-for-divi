@@ -1,0 +1,16 @@
+{
+    "name": "divi/table-for-divi",
+    "autoload": {
+        "psr-4": {
+            "TFDT\\": "./"
+        }
+    },
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "^9.6",
+        "yoast/phpunit-polyfills": "^2.0"
+    },
+    "scripts": {
+        "test": "phpunit"
+    }
+}
