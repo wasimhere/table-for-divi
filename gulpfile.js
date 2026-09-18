@@ -31,6 +31,7 @@ const zip = async () => {
             '!yarn.lock',
             '!composer.json',
             '!composer.lock',
+            '!README.md',
         ], { base: '.' }),
         gulpZip(package.name + '.zip'),
         dest('./')
