@@ -2,7 +2,7 @@
     "name": "divi/table-for-divi",
     "autoload": {
         "psr-4": {
-            "TFDT\\": "./"
+            "TFDT\\Modules\\": "Modules/"
         }
     },
     "require": {},

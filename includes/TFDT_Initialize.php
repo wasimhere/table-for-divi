@@ -184,6 +184,7 @@ class TFDT_Initialize {
     global $wpdb;
 
     // Find all posts/pages containing tfdt_module references
+    // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
     $posts = $wpdb->get_results(
       "SELECT ID, post_content FROM {$wpdb->posts} WHERE post_content LIKE '%tfdt_module%'"
     );
@@ -216,6 +217,8 @@ class TFDT_Initialize {
 
         // Update post content in database if changes were made
         if ( $content !== $post->post_content ) {
+
+          // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
           $wpdb->update(
             $wpdb->posts,
             [ 'post_content' => $content ],
@@ -223,6 +226,7 @@ class TFDT_Initialize {
             [ '%s' ],
             [ '%d' ]
           );
+          
         }
       }
     }
